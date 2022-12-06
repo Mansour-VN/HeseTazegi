@@ -1,0 +1,51 @@
+.btn {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  filter: brightness(1);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+  transition: 0.3s;
+}
+.btn_primary {
+  background: #b0bf24;
+  color: white;
+}
+.btn_neutral {
+  background: #f5f8fa;
+  color: #7e8299;
+}
+.btn_neutral_white {
+  background: withe;
+  color: #7e8299;
+}
+.btn_normal {
+  width: 127px;
+}
+.btn_medium {
+  width: 241px;
+}
+.btn_large {
+  width: 192px;
+}
+.btn_xLarge {
+  width: 323px;
+}
+
+.icon{
+    height: 16px;
+    width: 16px;
+}
+.iconL{
+    margin-right: 10px;
+    
+}
+.iconR{
+    margin-left: 10px;
+}
