@@ -3,7 +3,8 @@
   border-radius: 5px;
   height: 40px;
   filter: brightness(1);
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,21 +15,21 @@
   transition: 0.3s;
 }
 .btn_primary {
-  background: #b0bf24;
+  background: var(--Green);
   color: white;
 }
 .btn_neutral {
-  background: #f5f8fa;
-  color: #7e8299;
+  background: var(--Gray100);
+  color: var(--Gray600);
 }
 .btn_neutral_white {
   background: withe;
-  color: #7e8299;
+  color: var(--Gray600);
 }
 .btn_normal {
   width: 127px;
 }
-.btn_medium {
+.btn5{
   width: 241px;
 }
 .btn_large {
@@ -43,9 +44,9 @@
     width: 16px;
 }
 .iconL{
-    margin-right: 10px;
+    margin-right: 5px;
     
 }
 .iconR{
-    margin-left: 10px;
+    margin-left: 5px;
 }

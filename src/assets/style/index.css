@@ -1,5 +1,9 @@
+@import "./reset.css";
+@import "./var.css";
+@import "./public.css";
+@import "./App.css";
 @import './components/Button/Button.css';
-@import './components/CardBig/CardBig.css';
-@import './components/CardSmall/CardSmall.css';
+@import './components/Card/Card.css';
+@import './components//Plate/Plate.css';
 @import './components/Field/Field.css';
 @import './components/Modal/Modal.css';

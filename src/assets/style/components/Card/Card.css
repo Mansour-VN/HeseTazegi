@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: white;
+  height: 275px;
+  width: fit-content;
+  padding: 16px;
+}
+.card_img {
+  height: 112px;
+  border-radius: 8px;
+}
+.card_title {
+  color: var(--Gray800);
+  font-size: 22px;
+  font-weight: bolder;
+}
+.card_content {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tag {
+  line-height: 28px;
+  width: 77px;
+  height: 28px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.speed {
+  background: var(--Gray100);
+  color: var(--Orange400);
+}
+.slow {
+  color: var(--Secondary800);
+  background: var(--Gray100);
+}
+.card_voite {
+  line-height: 28px;
+  width: 77px;
+  height: 28px;
+  color: var(--Gray800);
+}
