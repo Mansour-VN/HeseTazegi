@@ -26,12 +26,19 @@
   background: withe;
   color: var(--Gray600);
 }
+.btn_small{
+  width: 26px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-90deg);
+  background: var(--OrangeMain);
+}
 .btn_normal {
   width: 127px;
 }
-.btn5{
-  width: 241px;
-}
+
 .btn_large {
   width: 192px;
 }

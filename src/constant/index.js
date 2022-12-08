@@ -6,6 +6,7 @@ import {
 } from "assets/image";
 
 const Desert = {
+  id:1,
   title: "دسر موز",
   image_1: Banana_Desert,
   image_2: Banana_Desert2,
@@ -22,6 +23,7 @@ const Desert = {
   },
 };
 const Soup = {
+  id:2,
   title: "سوپ سیب زمینی",
   image_1: Potato_Soup,
   image_2: Potato_Soup2,

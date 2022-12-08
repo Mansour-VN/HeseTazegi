@@ -2,10 +2,17 @@
   --Gray50: #f9fafb;
   --Gray100: #f5f8fa;
   --Gray200: #eff2f5;
+  --Gray300: #e4e6ef;
   --Gray500: #a1a5b7;
   --Gray600: #7e8299;
+  --Gray700: #5e6278;
   --Gray800: #3f4254;
+  --red500: #f44336;
+  --OrangeMain: #fddcc5;
+  --Orange50: #fff6e9;
+  --Orange300: #f69427;
   --Orange400: #7d4300;
   --Secondary800: #036838f5;
-  --Green : #b0bf24;
+  --Green: #b0bf24;
+  --primary500: #2196f3;
 }

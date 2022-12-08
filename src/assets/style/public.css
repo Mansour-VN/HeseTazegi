@@ -39,3 +39,6 @@ code {
 #root {
   height: 100%;
 }
+button{
+  padding: 0;
+}

@@ -4,7 +4,6 @@ export const Plate = ({ PlateTitle, meals, Click, tip }) => {
 
   return (
     
-    <div className="plate_plan">
       <div className="plate">
         <div className="plate_title">
           <h3 id="plate_title">{PlateTitle}</h3>
@@ -26,6 +25,5 @@ export const Plate = ({ PlateTitle, meals, Click, tip }) => {
           }
         </div>
       </div>
-    </div> 
   );
 };
