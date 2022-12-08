@@ -5,6 +5,8 @@
   width: 90vw;
   margin: auto;
   padding-top: 33px;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 section {
@@ -80,8 +82,9 @@ h2 {
 }
 .dsp_block{
   display: block;
-  position: sticky;
+  position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 .dsp_none{
   display: none;

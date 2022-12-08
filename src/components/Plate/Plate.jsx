@@ -1,5 +1,5 @@
 import { Card } from "components";
-export const Plate = ({ PlateTitle, meals, Click, tip }) => {
+export const Plate = ({ PlateTitle, meals, Click, tip,id }) => {
   
 
   return (
@@ -19,6 +19,7 @@ export const Plate = ({ PlateTitle, meals, Click, tip }) => {
                   tag={item.tag}
                   Click={Click}
                   tip={tip}
+                  id={item.id}
                 />
               )
             })

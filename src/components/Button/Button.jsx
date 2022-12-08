@@ -1,4 +1,4 @@
-export const Button = ({ text, type, Click, size, iconR, iconL }) => {
+export const Button = ({ text, type, Click, size, iconR, iconL,id }) => {
   const btn = () => {
     if (iconL) {
       return (
@@ -21,7 +21,7 @@ export const Button = ({ text, type, Click, size, iconR, iconL }) => {
   };
 
   return (
-    <button className={`btn btn_${type} btn_${size}`} onClick={() => Click()}>
+    <button className={`btn btn_${type} btn_${size}`} onClick={({id}) => Click()}>
       {btn()}
     </button>
   );

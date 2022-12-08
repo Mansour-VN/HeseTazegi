@@ -1,7 +1,7 @@
 export const Field = ({ material}) => {
   return (
     <div className="fields">
-      <div className="materials">
+      <div className="field_material">
         <input
           className="materials_chk"
           type="checkbox"

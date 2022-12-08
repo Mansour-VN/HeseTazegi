@@ -1,6 +1,9 @@
 import { ArrowLeft, Big_ArrowLeft } from "assets/image";
 import { Button } from "components";
+// import { useStateContext } from "contexts/ContextProvider";
 export const Card = ({ image, title, voite, tag, Click, tip }) => {
+// const {setModal} = useStateContext()
+
   return (
     <div className="card">
       <img src={image} alt={title} className="card_img" />
@@ -11,18 +14,18 @@ export const Card = ({ image, title, voite, tag, Click, tip }) => {
           className={`tag ${tag === "سریع" ? "speed" : "slow"}`}
         >{`غذای ${tag}`}</p>
       </div>
-      {(tip === "2" || tip === 2 )? (
+      {tip === "2" ? (
         <>
           <Button
-          key='1'
             className="btn1"
             text="ثبت رای"
             type="neutral"
             size="large"
-            Click={()=>{console.log('clicked');}}
+            Click={() => {
+              console.log("clicked");
+            }}
           />
           <Button
-          key='2'
             className="btn2"
             text="اطلاعات بیشتر"
             type="neutral_white"
@@ -33,7 +36,6 @@ export const Card = ({ image, title, voite, tag, Click, tip }) => {
         </>
       ) : (
         <Button
-        key='3'
           className="btn3"
           text="مشاهده مواد اولیه"
           type="neutral"

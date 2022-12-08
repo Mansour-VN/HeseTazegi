@@ -1,10 +1,10 @@
 import { Big_ArrowLeft, Share } from "assets/image";
 import { Button, Modal, Plate } from "components";
 import { useState } from "react";
-import { cookToday, foods } from "./constant";
+import { cookToday, voite } from "./constant";
 
 function App() {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const modalHandel = () => {
     setModal(!modal);
@@ -14,6 +14,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className={modal ? 'dsp_block':'dsp_none'}>
+      <Modal idFood={1} Click={modalHandel}/>
+      </div>
       <h1>کمپین چی بپزم؟</h1>
       <section className="today">
         <div className="section_header">
@@ -61,7 +64,7 @@ function App() {
           </div>
         </div>
         <div className="todayPlate">
-          {Object.entries(foods).map(([title, meals], index) => (
+          {Object.entries(voite).map(([title, meals], index) => (
             <Plate
               key={index}
               PlateTitle={title}
@@ -74,9 +77,6 @@ function App() {
           ))}
         </div>
       </section>
-      <div className={modal ? 'dsp_block':'dsp_none'}>
-      <Modal idFood={1}/>
-      </div>
     </div>
   );
 }

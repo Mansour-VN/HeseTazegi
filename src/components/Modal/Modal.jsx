@@ -1,7 +1,8 @@
 import { Button, Field } from "components";
 import { Big_ArrowLeft, Big_ArrowDown } from "assets/image";
+import { voite } from "constant";
 
-export const Modal = ({ idFood }) => {
+export const Modal = ({ idFood, Click }) => {
   return (
     <div className="modal">
       <div className="modal_title">
@@ -41,7 +42,7 @@ export const Modal = ({ idFood }) => {
         </p>
       </div>
       <div className="modal_materials">
-        <Field material={{ "سیب زمینی": "100گرم" }} />
+        <Field material={voite} />
       </div>
       <div className="modal_contact">
         <p className="modal_contact_content">
@@ -53,14 +54,7 @@ export const Modal = ({ idFood }) => {
           name="tel"
           className="modal_contact_input"
         />
-        <Button
-          text="ورود"
-          type="primary"
-          Click={() => {
-            console.log("clicked");
-          }}
-          size="xLarge"
-        />
+        <Button text="ورود" type="primary" Click={Click} size="xLarge" />
       </div>
     </div>
   );
