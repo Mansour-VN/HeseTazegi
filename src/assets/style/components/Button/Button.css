@@ -54,13 +54,12 @@
 }
 .iconL {
   margin-right: 4px;
-  
 }
 .iconR {
   margin-left: 4px;
 }
 .lable_btn {
-  font-size: 12;
+  font-size: 12px;
   font-weight: bolder;
 }
 @media screen and (max-width: 800px) {
@@ -75,8 +74,8 @@
     font-weight: bolder;
   }
   .btn_primary {
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px ;
+    height: 32px ;
   }
   .btn_large {
     width: 107px;
