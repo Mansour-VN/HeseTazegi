@@ -1,14 +1,33 @@
 import { Button, Field } from "components";
 import { Big_ArrowLeft, Big_ArrowDown } from "assets/image";
-import { voite } from "constant";
+import { menu } from "constant";
+import { useStateContext } from "contexts/ContextProvider";
+import { useEffect } from "react";
 
-export const Modal = ({ idFood, Click }) => {
+export const Modal = () => {
+  const { modal, setModal, idFood } = useStateContext();
+
+  useEffect(() => {
+    selector();
+    console.log(item);
+  }, [idFood]);
+
+  const selector = () => {
+    Object.entries(menu).map(([id, item]) => {
+      if (id === idFood) {
+        console.log(item);
+        return item;
+      }
+    });
+  };
+  let item = selector();
+
   return (
     <div className="modal">
       <div className="modal_title">
-        <img className="modal_img" src="" alt="" />
+        <img className="modal_img" src={"item.image_2"} alt="" />
         <div className="modal_title_content">
-          <h4 className="title_titr">سیب زمینی</h4>
+          <h4 className="title_titr">{"item.title"}</h4>
           <p className="title_content">
             در صورتیکه هر کدام از مواد اولیه در لیست را در خانه موجود ندارید، با
             علامت زدن آنها و سپس ارسال لیست مواد اولیه به شماره همراه مورد نظر،
@@ -17,11 +36,12 @@ export const Modal = ({ idFood, Click }) => {
           <Button
             text="اطلاعات بیشتر"
             type="neutral_white"
-            Click={() => {
-              console.log("clicked");
-            }}
             size="xLarge"
             iconL={Big_ArrowLeft}
+            share=""
+            Click={() => {
+              console.log("اطلاعات بیشتر clicked");
+            }}
           />
         </div>
       </div>
@@ -41,9 +61,7 @@ export const Modal = ({ idFood, Click }) => {
           لیست خرید خود را تهیه کنید.
         </p>
       </div>
-      <div className="modal_materials">
-        <Field material={voite} />
-      </div>
+      <div className="modal_materials"></div>
       <div className="modal_contact">
         <p className="modal_contact_content">
           شماره همراه موردنظر را برای ارسال چک لیست پخت و پز وارد کنید:
@@ -54,7 +72,12 @@ export const Modal = ({ idFood, Click }) => {
           name="tel"
           className="modal_contact_input"
         />
-        <Button text="ورود" type="primary" Click={Click} size="xLarge" />
+        <Button
+          text="ورود"
+          type="primary"
+          Click={() => setModal(!modal)}
+          size="xLarge"
+        />
       </div>
     </div>
   );

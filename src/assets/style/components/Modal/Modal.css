@@ -16,9 +16,8 @@
 .modal_title {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
-  flex-wrap: wrap;
   align-items: center;
   gap: 40px;
 }
@@ -28,20 +27,21 @@
   border-radius: 16px;
 }
 .modal_title_content {
+  max-width: 323px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: justify;
   height: 164px;
 }
 .title_titr {
-    font-size: 34px;
-    font-weight: bolder;
+  font-size: 34px;
+  font-weight: bolder;
 }
 .title_content {
   display: flex;
   flex-direction: column;
-  width: 323px;
+  text-align: justify;
+  /* width: 100%; */
 }
 .modal_notif {
   /* max-width: 640px; */

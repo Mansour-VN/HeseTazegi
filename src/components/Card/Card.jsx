@@ -1,9 +1,7 @@
 import { ArrowLeft, Big_ArrowLeft } from "assets/image";
 import { Button } from "components";
-// import { useStateContext } from "contexts/ContextProvider";
-export const Card = ({ image, title, voite, tag, Click, tip }) => {
-// const {setModal} = useStateContext()
 
+export const Card = ({ image, title, voite, tag, Click, tip }) => {
   return (
     <div className="card">
       <img src={image} alt={title} className="card_img" />
@@ -21,9 +19,7 @@ export const Card = ({ image, title, voite, tag, Click, tip }) => {
             text="ثبت رای"
             type="neutral"
             size="large"
-            Click={() => {
-              console.log("clicked");
-            }}
+            share=""
           />
           <Button
             className="btn2"
@@ -31,7 +27,7 @@ export const Card = ({ image, title, voite, tag, Click, tip }) => {
             type="neutral_white"
             size="large"
             iconL={Big_ArrowLeft}
-            Click={Click}
+            share=""
           />
         </>
       ) : (
@@ -42,6 +38,7 @@ export const Card = ({ image, title, voite, tag, Click, tip }) => {
           size="large"
           iconL={ArrowLeft}
           Click={Click}
+          share=""
         />
       )}
     </div>

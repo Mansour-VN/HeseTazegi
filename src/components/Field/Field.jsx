@@ -1,16 +1,17 @@
-export const Field = ({ material}) => {
+export const Field = ({ item}) => {
   return (
     <div className="fields">
-      <div className="field_material">
+      {console.log(item)}
+      {/* <div className="field_material">
         <input
           className="materials_chk"
           type="checkbox"
           name="material"
-          value={`${material.name}}`}
+          value={`${item[1]}}`}
         />
-        <p className="materials_content">{material.name}</p>
+        <p className="materials_content">{item[0]}</p>
       </div>
-      <p className="amount">{material.amount}</p>
+      <p className="amount">{item[1]}</p> */}
     </div>
   );
 };

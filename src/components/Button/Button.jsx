@@ -1,9 +1,9 @@
-export const Button = ({ text, type, Click, size, iconR, iconL,id }) => {
+export const Button = ({ text, type, Click, size, iconR, iconL, share }) => {
   const btn = () => {
     if (iconL) {
       return (
         <>
-          <label className="btn_label">{text}</label>
+          <label className={share !=="" ? "lable_share" : "lable_btn"}>{text}</label>
           <img className="icon iconL" src={iconL} alt="icon" />
         </>
       );
@@ -12,16 +12,19 @@ export const Button = ({ text, type, Click, size, iconR, iconL,id }) => {
       return (
         <>
           <img className="icon iconR" src={iconR} alt="icon" />
-          <label className="btn_label">{text}</label>
+          <label className={share !== "" ? "lable_share" : "lable_btn"}>{text}</label>
         </>
       );
     } else {
-      return(text)
+      return text;
     }
   };
 
   return (
-    <button className={`btn btn_${type} btn_${size}`} onClick={({id}) => Click()}>
+    <button
+      className={`btn btn_${type} btn_${size}`}
+      onClick={({ id }) => Click()}
+    >
       {btn()}
     </button>
   );

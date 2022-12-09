@@ -1,15 +1,16 @@
 .card {
+  width: fit-content;
+  height: 275px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
   background: white;
-  height: 275px;
-  width: fit-content;
   padding: 16px;
 }
 .card_img {
+  width: 192px;
   height: 112px;
   border-radius: 8px;
 }
@@ -19,7 +20,7 @@
   font-weight: bolder;
 }
 .card_content {
-  width: 160px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,8 +43,27 @@
   background: var(--Gray100);
 }
 .card_voite {
+  font-size: 12px;
   line-height: 28px;
   width: 77px;
   height: 28px;
   color: var(--Gray800);
+}
+@media screen and (max-width: 800px) {
+  .card{
+    height: 215px;
+  }
+  .card_img {
+    width: 129px;
+    height: 75px;
+  }
+  .card_title {
+    font-size: 12px;
+  }
+  .card_content{
+    width: 107px;
+  }
+  .card_voite{
+    font-size: 10px;
+  }
 }

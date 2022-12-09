@@ -4,13 +4,13 @@ import {
   Potato_Soup,
   Potato_Soup2,
 } from "assets/image";
-const foods = [
-  {
-    id: 1,
+export const menu = {
+  1: {
+    id: "1",
     title: "دسر موز",
     image_1: Banana_Desert,
     image_2: Banana_Desert2,
-    tag: "آرام پز",
+    tag: "سریع",
     voite: "26",
     materials: {
       موز: "3 عدد",
@@ -22,8 +22,8 @@ const foods = [
       خامه: "50 گرم",
     },
   },
-  {
-    id: 2,
+  2: {
+    id: "2",
     title: "سوپ سیب زمینی",
     image_1: Potato_Soup,
     image_2: Potato_Soup2,
@@ -37,12 +37,13 @@ const foods = [
       "روغن مایع معمولی": "به مقدار لازم",
     },
   },
-];
-export const cookToday = {
-  ناهار: [foods[1], foods[0]],
-  شام: [foods[0], foods[1]],
 };
+export const cookToday = {
+  ناهار: [menu[1], menu[2]],
+  شام: [menu[2], menu[1]],
+};
+
 export const voite = {
-  ناهار: [foods[1], foods[0], foods[1], foods[0]],
-  شام: [foods[0], foods[1], foods[0], foods[1]],
+  ناهار: [menu[1], menu[2], menu[1], menu[2]],
+  شام: [menu[2], menu[1], menu[2], menu[1]],
 };

@@ -6,6 +6,7 @@ import Banana_Desert2 from "./Image_Banana_Desert2.jpg";
 import Potato_Soup from "./Image_Potato_Soup.png";
 import Potato_Soup2 from "./Image_Potato_Soup2.png";
 import Big_ArrowDown from "./Icon_Big-ArrowDown.svg";
+import Red_Circle from "./Icon_Red_Circle.svg";
 
 export {
   ArrowLeft,
@@ -15,5 +16,6 @@ export {
   Potato_Soup,
   Potato_Soup2,
   Banana_Desert2,
-  Big_ArrowDown
+  Big_ArrowDown,
+  Red_Circle,
 };
