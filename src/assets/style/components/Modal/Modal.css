@@ -1,3 +1,4 @@
+
 .modal {
   max-width: 665px;
   border-radius: 16px;
@@ -7,11 +8,12 @@
   align-items: center;
   background: var(--Gray500);
   gap: 15px;
-  z-index: 1000;
   margin: auto;
   padding: 20px;
-
-
+  position: fixed;
+  left: calc(50vw-332px);
+  left: 30vw;
+  z-index: 1000;
 }
 .modal_title {
   width: 100%;
@@ -64,6 +66,9 @@
   width: 100%;
   border-bottom: 2px solid var(--Gray300);
   padding-bottom: 15px;
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
 }
 .modal_contact {
   display: flex;

@@ -20,9 +20,9 @@ export const Plate = ({ PlateTitle, meals, tip}) => {
               tag={item.tag}
               tip={tip}
               Click={()=>{
+                // console.log(idFood)
                 setIdFood(item.id)
                 setModal(!modal)
-                console.log(idFood);
               }}
             />
           );

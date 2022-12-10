@@ -4,12 +4,24 @@ import { cookToday, voite } from "./constant";
 import { useStateContext } from "contexts/ContextProvider";
 
 function App() {
-  const { modal, idFood } = useStateContext();
+  const { modal, setModal, setItemSelect } = useStateContext();
 
   return (
     <div className="App">
-      <div className={modal ? "modal_dsp_block" : "modal_dsp_none"}>
+      {/* <div
+        className={modal ? "modal_dsp_block" : "modal_dsp_none"}
+      >
         <Modal />
+      </div> */}
+      {modal && <Modal/>}
+      <div
+        className={modal ? "modal_dsp_block" : "modal_dsp_none"}
+        onClick={(e) => {
+          setModal(false);
+          setItemSelect({})
+
+        }}
+      >
       </div>
       <h1>کمپین چی بپزم؟</h1>
       <section className="today">

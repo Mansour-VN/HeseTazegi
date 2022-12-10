@@ -1,5 +1,6 @@
 .plate {
-  width: fit-content;
+  /* width: fit-content; */
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -22,11 +23,10 @@
 }
 .suggestion {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 26px;
+  gap: 42px;
   padding: 30px 30px;
   max-width: 550px;
 }

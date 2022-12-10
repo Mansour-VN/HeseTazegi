@@ -5,29 +5,26 @@ import { useStateContext } from "contexts/ContextProvider";
 import { useEffect } from "react";
 
 export const Modal = () => {
-  const { modal, setModal, idFood } = useStateContext();
+  const { idFood, itemSelect, setItemSelect } = useStateContext();
 
   useEffect(() => {
     selector();
-    console.log(item);
   }, [idFood]);
 
   const selector = () => {
     Object.entries(menu).map(([id, item]) => {
       if (id === idFood) {
-        console.log(item);
-        return item;
+        setItemSelect(item);
       }
     });
   };
-  let item = selector();
 
   return (
     <div className="modal">
       <div className="modal_title">
-        <img className="modal_img" src={"item.image_2"} alt="" />
+        <img className="modal_img" src={itemSelect.image_2} alt="" />
         <div className="modal_title_content">
-          <h4 className="title_titr">{"item.title"}</h4>
+          <h4 className="title_titr">{itemSelect.title}</h4>
           <p className="title_content">
             در صورتیکه هر کدام از مواد اولیه در لیست را در خانه موجود ندارید، با
             علامت زدن آنها و سپس ارسال لیست مواد اولیه به شماره همراه مورد نظر،
@@ -61,7 +58,12 @@ export const Modal = () => {
           لیست خرید خود را تهیه کنید.
         </p>
       </div>
-      <div className="modal_materials"></div>
+      <div className="modal_materials">
+        {itemSelect.materials &&
+          Object.entries(itemSelect.materials).map((item, index) => (
+            <Field key={index} material={item} />
+          ))}
+      </div>
       <div className="modal_contact">
         <p className="modal_contact_content">
           شماره همراه موردنظر را برای ارسال چک لیست پخت و پز وارد کنید:
@@ -75,7 +77,7 @@ export const Modal = () => {
         <Button
           text="ورود"
           type="primary"
-          Click={() => setModal(!modal)}
+          Click={() => console.log("ورود clicked")}
           size="xLarge"
         />
       </div>

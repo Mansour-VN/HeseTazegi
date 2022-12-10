@@ -94,11 +94,14 @@ h2 {
   align-items: center;
   gap: 15px;
 }
+
 .modal_dsp_block {
+  width: 100vw;
+  height: 100vh;
   display: block;
   position: fixed;
-  width: 90%;
-  z-index: 1000;
+  left: 0%;
+  z-index: 999;
 }
 .modal_dsp_none {
   display: none;

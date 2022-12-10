@@ -5,6 +5,7 @@ const StateContext = createContext();
 const ContextProvider = ({ children }) => {
   const [modal, setModal] = useState(false);
   const [idFood, setIdFood] = useState("1");
+  const [itemSelect,setItemSelect] = useState({})
   return (
     <StateContext.Provider
       value={{
@@ -12,6 +13,8 @@ const ContextProvider = ({ children }) => {
         setModal,
         idFood,
         setIdFood,
+        itemSelect,
+        setItemSelect
       }}
     >
       {children}

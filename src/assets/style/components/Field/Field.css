@@ -1,3 +1,4 @@
+
 .fields {
   width: 100%;
   height: 50px;
@@ -10,20 +11,20 @@
   box-sizing: border-box;
   padding: 0 19px;
 }
-.field_material {
-  display: flex;
-  justify-content: space-between;
-  gap: 4px;
-  width: 100%;
-}
+
 .materials_chk {
   width: 20px;
   height: 20px;
   border: 1.5px solid var(--Gray500) ;
 }
 .amount {
+  font-size: 12px;
 }
 .materials_content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
 }
