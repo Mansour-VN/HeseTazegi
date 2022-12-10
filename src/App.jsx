@@ -8,11 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div
-        className={modal ? "modal_dsp_block" : "modal_dsp_none"}
-      >
-        <Modal />
-      </div> */}
+     
       {modal && <Modal/>}
       <div
         className={modal ? "modal_dsp_block" : "modal_dsp_none"}
